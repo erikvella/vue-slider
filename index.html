@@ -5,7 +5,7 @@
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Il carosello</title>
+  <title>Vue Slider</title>
 </head>
 <body>
 
@@ -23,7 +23,9 @@
 
 
 
-        <div class="slider">
+        <div @mouseenter = "runAutoSlide = true"
+             @mouseleave = "runAutoSlide = false"
+             class="slider">
           <div class="items-wrapper">
            <!-- qui dentro metterò le foto con js -->
         <div class="card item">

@@ -11,6 +11,7 @@ data(){
        'img/05.webp',
     ],
     counter : 0,
+    runAutoSlide : false
   }
 },
 
@@ -37,7 +38,10 @@ if(this.counter < 0){
 },
 
 mounted(){
-
+setInterval(() => {
+  this.nextPrev(true);
+  if(this.runAutoSlide) this.nextPrev(true);
+},1000)
 },
 }).mount('#app');
 
